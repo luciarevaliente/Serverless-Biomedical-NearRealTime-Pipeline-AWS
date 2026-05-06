@@ -84,31 +84,30 @@ resource "aws_cloudwatch_dashboard" "pipeline_dashboard" {
       {
         type = "metric"
         properties = {
-          title  = "Pipeline Latency (ms)"
-          period = 60
-          stat   = "p95"
-          metrics = [
-            ["BiomedicalPipeline", "PipelineLatencyMs"]
-          ]
+          title   = "Pipeline Latency (ms)"
+          region  = var.aws_region
+          period  = 60
+          stat    = "p95"
+          metrics = [["BiomedicalPipeline", "PipelineLatencyMs"]]
         }
       },
       {
         type = "metric"
         properties = {
-          title  = "Throughput (events/s)"
-          period = 60
-          stat   = "Sum"
-          metrics = [
-            ["BiomedicalPipeline", "ProcessedEvents"]
-          ]
+          title   = "Throughput (events/s)"
+          region  = var.aws_region
+          period  = 60
+          stat    = "Sum"
+          metrics = [["BiomedicalPipeline", "ProcessedEvents"]]
         }
       },
       {
         type = "metric"
         properties = {
-          title  = "Data Integrity - Ingested vs Stored"
-          period = 60
-          stat   = "Sum"
+          title   = "Data Integrity - Ingested vs Stored"
+          region  = var.aws_region
+          period  = 60
+          stat    = "Sum"
           metrics = [
             ["BiomedicalPipeline", "IngestedEvents"],
             ["BiomedicalPipeline", "StoredEvents"]
