@@ -31,7 +31,7 @@ table = dynamodb_resource.Table(DYNAMODB_TABLE)
 REQUIRED_FIELDS = [
     'subject_id', 'device_id', 'sensor_type',
     'sampling_rate_hz', 'sensor_timestamp',
-    'value', 'unit', 'schema_version'
+    'value', 'unit', 'scenario', 'schema_version'
 ]
 
 # CloudWatch batch limit
