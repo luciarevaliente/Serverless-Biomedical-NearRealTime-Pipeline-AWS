@@ -74,8 +74,8 @@ def lambda_handler(event, context):
             processed_record = float_to_decimal({
                 **event_data,
                 'subject_id_sensor_type': f"{event_data['subject_id']}#{event_data['sensor_type']}",
-                'processed_timestamp': str(processed_timestamp),
-                'sensor_timestamp': str(event_data['sensor_timestamp']),
+                'processed_timestamp': processed_timestamp,
+                'sensor_timestamp': event_data['sensor_timestamp'],
                 'valid': True,
                 'pipeline_latency_ms': pipeline_latency_ms
             })
