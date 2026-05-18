@@ -27,3 +27,18 @@ output "cloudwatch_dashboard_name" {
   description = "Name of the CloudWatch dashboard"
   value       = module.biomedical_pipeline.cloudwatch_dashboard_name
 }
+
+output "cloudtrail_name" {
+  description = "Name of the CloudTrail trail"
+  value       = module.biomedical_pipeline.cloudtrail_name
+}
+
+output "cloudtrail_s3_bucket" {
+  description = "Name of the S3 bucket for CloudTrail logs"
+  value       = module.biomedical_pipeline.cloudtrail_s3_bucket
+}
+
+output "budget_name" {
+  description = "Name of the AWS Budget"
+  value       = module.biomedical_pipeline.budget_name
+}

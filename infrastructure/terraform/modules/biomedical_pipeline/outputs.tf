@@ -53,3 +53,17 @@ output "cloudwatch_dashboard_name" {
   description = "Name of the CloudWatch dashboard"
   value       = aws_cloudwatch_dashboard.pipeline_dashboard.dashboard_name
 }
+
+# CloudTrail
+output "cloudtrail_name" {
+  value       = aws_cloudtrail.audit.name
+}
+
+output "cloudtrail_s3_bucket" {
+  value       = aws_s3_bucket.cloudtrail_logs.id
+}
+
+# Budgets
+output "budget_name" {
+  value       = aws_budgets_budget.monthly.name
+}
