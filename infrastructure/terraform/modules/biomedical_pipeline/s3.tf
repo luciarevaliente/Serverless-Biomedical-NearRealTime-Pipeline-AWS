@@ -10,7 +10,8 @@ resource "aws_s3_bucket" "raw_data" {
 
 # Enable versioning for raw data bucket
 resource "aws_s3_bucket_versioning" "raw_data_versioning" {
-  bucket = aws_s3_bucket.raw_data.id
+  bucket        = aws_s3_bucket.raw_data.id
+  force_destroy = true
 
   versioning_configuration {
     status = "Enabled"
