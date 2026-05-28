@@ -10,4 +10,4 @@ infrastructure/terraform/terraform.tfvars
 __pycache__/
 *.pyc
 
-src/analysis/results/
+src/analysis/results2/

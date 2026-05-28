@@ -32,7 +32,8 @@ resource "aws_lambda_event_source_mapping" "kinesis_trigger" {
   event_source_arn              = aws_kinesis_stream.biomedical_stream.arn
   function_name                 = aws_lambda_function.biomedical_processor.arn
   starting_position             = "LATEST"
-  batch_size                    = 100   # Process up to 100 records per batch for better throughput
+  batch_size                    = 500   # Process up to 500 records per batch for better throughput. 100-->500
+  parallelization_factor        = 10
   bisect_batch_on_function_error = true # Enable bisecting batches on error to isolate problematic records
 
   destination_config {
