@@ -10,5 +10,5 @@ infrastructure/terraform/terraform.tfvars
 __pycache__/
 *.pyc
 
-src/analysis/results2/
+src/data-generator/sent_events_*.json
 experiments/
