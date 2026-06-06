@@ -262,8 +262,8 @@ def main():
             total_scenario_events += sent
 
             if rep < repetitions:
-                logger.info("  Waiting 60s before next repetition...")
-                time.sleep(60)
+                logger.info("  Waiting 10s before next repetition...")
+                time.sleep(10)
 
         logger.info(f"  TOTAL scenario '{scenario_name}': {total_scenario_events} events")
 

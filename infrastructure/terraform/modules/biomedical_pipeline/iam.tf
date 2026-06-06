@@ -70,7 +70,8 @@ resource "aws_iam_role_policy" "lambda_dynamodb_policy" {
         Effect = "Allow"
         Action = [
           "dynamodb:PutItem",
-          "dynamodb:GetItem"
+          "dynamodb:GetItem",
+          "dynamodb:BatchWriteItem"
         ]
         Resource = aws_dynamodb_table.processed_data.arn
       }
