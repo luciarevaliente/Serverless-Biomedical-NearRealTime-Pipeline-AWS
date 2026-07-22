@@ -1,6 +1,6 @@
 # Engineering Decisions
 
-> Technical rationale behind the architectural choices adopted in the platform.
+> Technical rationale behind the architectural choices adopted in the project.
 
 ---
 
